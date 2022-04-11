@@ -1,18 +1,18 @@
 <script setup>
-  import { ref } from "vue";
-  
-  import useTodos from "../composables/useTodos";
-  
-  const { addTodo } = useTodos();
-  
-  const newTodo = ref("");
-  
-  const add = () => {
-    if (newTodo.value) {
-      addTodo(newTodo.value);
-      newTodo.value = "";
-    }
-  };
+import { ref } from "vue";
+
+import useTodos from "../composables/useTodos";
+
+const { addTodo } = useTodos();
+
+const newTodo = ref("");
+
+const add = () => {
+  if (newTodo.value) {
+    addTodo(newTodo.value);
+    newTodo.value = "";
+  }
+};
 </script>
 
 <template>
