@@ -4,7 +4,7 @@ import axios from "axios";
 const todos = ref([]);
 
 const api = axios.create({
-  baseURL: "https://api.bazanrodrigo.com/api/todos/",
+  baseURL: "https://api.bazanrodrigo.com/api/todos",
   params: {
     username: "hello",
     password: "there",
@@ -39,7 +39,7 @@ const useTodos = () => {
     const todo = todos.value.find((todo) => todo.id === id);
     todo.completed = !todo.completed;
     const { id: _id, ...todoToUpdate } = todo;
-    api.put(`/${id}`, todoToUpdate);
+    await api.put(`/${id}`, todoToUpdate);
     await getAll();
   };
 
