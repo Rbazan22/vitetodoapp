@@ -13,7 +13,7 @@ const api = axios.create({
 
 const useTodos = () => {
   const getAll = async () => {
-    const { data } = await api.get();
+    const { data } = await api.get("/");
     todos.value = data;
   };
 
