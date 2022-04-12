@@ -4,7 +4,7 @@ import axios from "axios";
 const todos = ref([]);
 
 const api = axios.create({
-  baseURL: "https://api.bazanrodrigo.com/api/todos",
+  baseURL: "https://api.bazanrodrigo.com/api/todos/",
   params: {
     username: "hello",
     password: "there",
